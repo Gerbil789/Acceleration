@@ -26,6 +26,9 @@ public:
 	int LastIndex;
 
 	UFUNCTION(BlueprintCallable, Category = "Checkpoints")
-	void Check(int index);
+	void Reset();
+
+	UFUNCTION(BlueprintCallable, Category = "Checkpoints")
+	void Check(const int index, bool& valid, int& previousIndex, int& currentIndex, int& nextIndex, bool& finish);
 
 };
